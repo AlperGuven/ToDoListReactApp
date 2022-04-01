@@ -1,0 +1,51 @@
+.InputWrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.input {
+    position: relative;
+    margin: calc($size-frame * 1.5) $size-frame;
+    
+    &__label {
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: calc($size-frame * 0.75) calc($size-frame * .5);
+      margin: calc($size-frame * 0.75 + 3px) calc($size-frame * .5);
+      background: white;
+      white-space: nowrap;
+      transform: translate(0, 0);
+      transform-origin: 0 0;
+      background: $color-background;
+      transition: transform 120ms ease-in;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+    &__field {
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+      border: 3px solid currentColor;
+      padding: calc($size-frame * 1.5) $size-frame;
+      color: currentColor;
+      background: transparent;
+      border-radius: $size-radius;
+      
+      &:focus,
+      &:not(:placeholder-shown) {
+        & + .input__label {
+          transform: translate(.25rem, -65%) scale(.8);
+          color: $color-accent;
+        }
+      }
+    }
+    &__error {
+      color: $color-caution;
+    }
+  }
+.button-group {
+    margin-top: calc($size-frame * 2.5);
+    margin-left: calc($size-frame * 0.75);
+}

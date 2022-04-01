@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500&display=swap');
+// initial
+@import "variables";
+@import "normalize";
+@import "main";
+// components
+@import "./components/ToDoInputItem";
+@import "./components/ToDoItemList";
+@import "./components/ToDoItem";
+@import "./components/DeleteButton";

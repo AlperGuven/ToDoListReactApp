@@ -1,0 +1,47 @@
+.list-container {
+    margin: 4rem auto;
+    padding: 2rem 3rem 3rem;
+    max-width: $containerMaxWidth;
+    min-width: $containerMinWidth;
+    box-shadow: 12px 13px 6px 1px #888;
+    overflow: hidden;
+    border-radius: $size-radius;
+    background: $color-accent;
+    width: $screenWrap;
+
+    &__header h1 {
+        font-weight: bold;
+    }
+
+    &__list-field ul {
+        margin-top: 2.6rem;
+        list-style: none;
+        padding-left: calc($size-frame * 0.75);
+    }
+
+    @media only screen and (max-width : 475px) {
+      padding: 2rem 1rem 3rem;
+      width: $screenWrapForMobile;
+    }
+  }
+  
+  // react transition group css
+  .todo-task-enter {
+    opacity: 0;
+  }
+  .todo-task-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+  }
+  .todo-task-exit {
+    opacity: 1;
+  }
+  .todo-task-exit-active {
+    /* opacity: 0; */
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 500ms ease-in-out;
+  }
+  .todoTask-list {
+    min-height: 200px;
+  }

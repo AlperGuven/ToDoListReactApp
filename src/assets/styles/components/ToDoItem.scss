@@ -1,0 +1,108 @@
+.todo-wrapper {
+    display: flex;
+    cursor: pointer;
+    margin: calc($size-frame * 0.75 + 3px) calc($size-frame) calc($size-frame * 0.75 + 3px) 1px;
+    padding: 1.1rem 3rem;
+    height: $taskItemHeight;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    position: relative;
+    transition: opacity 500ms ease-in-out;
+
+    &__button-part {
+        flex-shrink: 0;
+        padding-left: 0.7em;
+        margin-left: auto;
+        &button {
+            border: none;
+            font-size: 1em;
+            margin: 0.4em;
+            background: none;
+            -webkit-appearance: none;
+            cursor: pointer;
+            color: #fff;
+        }
+    }
+  }
+  .todo-task-item {
+    position: relative;
+    transition: opacity 0.4s linear;
+    &__list-item {
+      &__styled-checkbox {
+        position: absolute; // take it out of document flow
+        opacity: 0; // hide it
+      
+        & + label {
+          position: relative;
+          cursor: pointer;
+          padding: 0;
+        }
+      
+        // Box.
+        & + label:before {
+          content: '';
+          margin-right: 10px;
+          display: inline-block;
+          vertical-align: text-top;
+          width: 20px;
+          height: 20px;
+          background: white;
+        }
+
+        // Box focus
+        &:focus + label:before {
+            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+        }
+
+        // Box checked
+        &:checked + label:before {
+            background: $color-dark;
+        }
+        // Checkmark. Could be replaced with an image
+        &:checked + label:after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 9px;
+            background: white;
+            width: 2px;
+            height: 2px;
+            box-shadow: 
+            2px 0 0 white,
+            4px 0 0 white,
+            4px -2px 0 white,
+            4px -4px 0 white,
+            4px -6px 0 white,
+            4px -8px 0 white;
+            transform: rotate(45deg);
+        }
+      }
+    }
+  }
+  .todo-wrapper.task-completed {
+    transition: opacity 300ms ease-in-out;
+    transition-delay: 200ms;
+    opacity: 0.5;
+
+    .todo-task-item {
+        &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: -0.5rem;
+            display: block;
+            width: 0%;
+            height: 4px;
+            background: $color-light;
+            animation: strikeitem 0.3s ease-in 0s forwards;
+        }
+    }
+  }
+  
+  @keyframes strikeitem {
+    to {
+      width: calc(100% + 1rem);
+    }
+  }

@@ -1,0 +1,53 @@
+.App {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.btn {
+    &--primary {
+        color: white;
+        padding: $size-frame calc($size-frame * 2);
+        background: $color-dark;
+        border: none;
+        border-radius: $size-radius;
+        font-weight: 900;
+    }
+    &--caution {
+        color: white;
+        padding: $size-frame calc($size-frame * 2);
+        background: $color-caution;
+        border: none;
+        border-radius: $size-radius;
+        font-weight: 900;
+    }
+    &--trash {
+        color: $color-caution;
+        background: transparent;
+        border: none;
+        border-radius: $size-radius;
+    }
+    &--trash:hover {
+        color: $color-dark;
+    }
+    &--disable {
+        cursor: not-allowed;
+    }
+    &--disable:hover {
+        background: $color-caution;
+    }
+    &:hover {
+        background: $button-bg-hover-color;
+    }
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+input:focus{
+    outline: 1px solid white;
+    box-shadow: 0 0 5px white;
+}

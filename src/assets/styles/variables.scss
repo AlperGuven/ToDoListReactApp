@@ -1,0 +1,21 @@
+$color-light: white;
+$color-dark: #212121;
+$color-signal: #fab700;
+$color-caution: #FA0000;
+
+$color-background: $color-light;
+$color-text: $color-dark;
+$color-accent: $color-signal;
+
+$size-frame: .5rem;
+$size-radius: 0px;
+
+$button-bg-hover-color: #fad56e;
+$button-text-color: white;
+
+$containerMaxWidth: 700px;
+$containerMinWidth: 360px;
+$screenWrap: 50%;
+$screenWrapForMobile: 90%;
+
+$taskItemHeight: 22px;
