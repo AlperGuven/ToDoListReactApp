@@ -16,7 +16,7 @@ Install dependencies with
 
 > npm install 
 
-Run the Application with using Vue Dev Server
+Run the Application with using React Webpack Dev Server
 
 > npm run dev
 
