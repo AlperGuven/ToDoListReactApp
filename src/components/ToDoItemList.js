@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from 'react';
 import TodoInputItem from "./ToDoInputItem";
-import TodoItem from "./TodoItem";
+import TodoItem from "./ToDoItem";
 import DeleteButton from "./DeleteButton";
 import AppHeader from "./AppHeader";
 import { CSSTransition, TransitionGroup} from "react-transition-group";
