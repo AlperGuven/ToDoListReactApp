@@ -1,7 +1,7 @@
 {
-  "name": "todoApp",
+  "name": "todo-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "ToDo List Example App",
   "main": "index.js",
   "scripts": {
     "dev": "webpack serve",
